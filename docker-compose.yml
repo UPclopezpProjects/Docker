@@ -210,6 +210,21 @@ services:
     volumes:
       - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant:/avocado/merchant
       - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant/node_modules:/avocado/merchant/node_modules
+  microserviceMerchantOutput:
+    build: avocado/merchant-outputs
+    image: avocadoproject_merchant-outputs
+    container_name: merchant-outputs
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3007:3007"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.11
+    volumes:
+      - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant-outputs:/avocado/merchant-outputs
+      - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant-outputs/node_modules:/avocado/merchant-outputs/node_modules
   microserviceCarrier:
     build: avocado/carrier
     image: avocadoproject_carrier
@@ -240,6 +255,21 @@ services:
     volumes:
       - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio:/avocado/acopio
       - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio/node_modules:/avocado/acopio/node_modules
+  microserviceAcopioOutput:
+    build: avocado/acopio-outputs
+    image: avocadoproject_acopio-outputs
+    container_name: acopio-outputs
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3008:3008"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.12
+    volumes:
+      - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio-outputs:/avocado/acopio-outputs
+      - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio-outputs/node_modules:/avocado/acopio-outputs/node_modules
   microserviceProductor:
     build: avocado/productor
     image: avocadoproject_productor
