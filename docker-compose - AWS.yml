@@ -1,0 +1,175 @@
+#docker-compose.yml - AWS
+version: '2.4'
+services:
+  api-gateway:
+    build: avocado/api-gateway
+    image: avocadoproject_api-gateway
+    container_name: api-gateway
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "80:80"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.3
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/api_gateway:/avocado/api_gateway
+      - /home/ubuntu/AvocadoProject/avocado/api_gateway/node_modules:/avocado/api_gateway/node_modules
+  microserviceAudit:
+    build: avocado/audit
+    image: avocadoproject_audit
+    container_name: audit
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3000:3000"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.4
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/audit:/avocado/audit
+      - /home/ubuntu/AvocadoProject/avocado/audit/node_modules:/avocado/audit/node_modules
+  ganache:
+    image: trufflesuite/ganache-cli
+    container_name: ganache
+    command: ganache-cli
+    ports:
+      - "8545:8545"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.13
+  microserviceUsers:
+    build: avocado/users
+    image: avocadoproject_users
+    container_name: users
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3001:3001"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.5
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/users:/avocado/users
+      - /home/ubuntu/AvocadoProject/avocado/users/node_modules:/avocado/users/node_modules
+  microserviceMerchant:
+    build: avocado/merchant
+    image: avocadoproject_merchant
+    container_name: merchant
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3002:3002"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.6
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/merchant:/avocado/merchant
+      - /home/ubuntu/AvocadoProject/avocado/merchant/node_modules:/avocado/merchant/node_modules
+  microserviceMerchantOutput:
+    build: avocado/merchant-outputs
+    image: avocadoproject_merchant-outputs
+    container_name: merchant-outputs
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3007:3007"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.11
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/merchant-outputs:/avocado/merchant-outputs
+      - /home/ubuntu/AvocadoProject/avocado/merchant-outputs/node_modules:/avocado/merchant-outputs/node_modules
+  microserviceCarrier:
+    build: avocado/carrier
+    image: avocadoproject_carrier
+    container_name: carrier
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3003:3003"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.7
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/carrier:/avocado/carrier
+      - /home/ubuntu/AvocadoProject/avocado/carrier/node_modules:/avocado/carrier/node_modules
+  microserviceAcopio:
+    build: avocado/acopio
+    image: avocadoproject_acopio
+    container_name: acopio
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3004:3004"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.8
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/acopio:/avocado/acopio
+      - /home/ubuntu/AvocadoProject/avocado/acopio/node_modules:/avocado/acopio/node_modules
+  microserviceAcopioOutput:
+    build: avocado/acopio-outputs
+    image: avocadoproject_acopio-outputs
+    container_name: acopio-outputs
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3008:3008"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.12
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/acopio-outputs:/avocado/acopio-outputs
+      - /home/ubuntu/AvocadoProject/avocado/acopio-outputs/node_modules:/avocado/acopio-outputs/node_modules
+  microserviceProductor:
+    build: avocado/productor
+    image: avocadoproject_productor
+    container_name: productor
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3005:3005"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.9
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/productor:/avocado/productor
+      - /home/ubuntu/AvocadoProject/avocado/productor/node_modules:/avocado/productor/node_modules
+  microserviceTraceability:
+    build: avocado/traceability
+    image: avocadoproject_traceability
+    container_name: traceability
+    restart: always
+    #links: database
+    #command: npm update
+    ports:
+      - "3006:3006"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.10
+    volumes:
+      - /home/ubuntu/AvocadoProject/avocado/traceability:/avocado/traceability
+      - /home/ubuntu/AvocadoProject/avocado/traceability/node_modules:/avocado/traceability/node_modules
+  database:
+    image: mongo
+    container_name: mongoDB
+    ports:
+      - "27017:27017"
+    networks:
+       AvocadoNetwork:
+        ipv4_address: 172.18.1.2
+    volumes:
+      - /home/ubuntu/AvocadoProject/mongoData:/data/db
+networks:
+  AvocadoNetwork:
+    external: true
