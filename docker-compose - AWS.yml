@@ -31,15 +31,6 @@ services:
     volumes:
       - /home/ubuntu/AvocadoProject/avocado/audit:/avocado/audit
       - /home/ubuntu/AvocadoProject/avocado/audit/node_modules:/avocado/audit/node_modules
-  ganache:
-    image: trufflesuite/ganache-cli
-    container_name: ganache
-    command: ganache-cli
-    ports:
-      - "8545:8545"
-    networks:
-      AvocadoNetwork:
-        ipv4_address: 172.18.1.13
   microserviceUsers:
     build: avocado/users
     image: avocadoproject_users
@@ -160,6 +151,15 @@ services:
     volumes:
       - /home/ubuntu/AvocadoProject/avocado/traceability:/avocado/traceability
       - /home/ubuntu/AvocadoProject/avocado/traceability/node_modules:/avocado/traceability/node_modules
+  ganache:
+    image: trufflesuite/ganache-cli
+    container_name: ganache
+    command: ganache-cli
+    ports:
+      - "8545:8545"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.13
   database:
     image: mongo
     container_name: mongoDB

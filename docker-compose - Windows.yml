@@ -202,8 +202,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.3
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/api-gateway:/avocado/api_gateway
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/api-gateway/node_modules:/avocado/api-gateway/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/api-gateway:/avocado/api_gateway
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/api-gateway/node_modules:/avocado/api-gateway/node_modules
   microserviceAudit:
     build: avocado/audit
     image: avocadoproject_audit
@@ -217,17 +217,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.4
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/audit:/avocado/audit
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/audit/node_modules:/avocado/audit/node_modules
-  ganache:
-    image: trufflesuite/ganache-cli
-    container_name: ganache
-    command: ganache-cli
-    ports:
-      - "8545:8545"
-    networks:
-      AvocadoNetwork:
-        ipv4_address: 172.18.1.13
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/audit:/avocado/audit
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/audit/node_modules:/avocado/audit/node_modules
   microserviceUsers:
     build: avocado/users
     image: avocadoproject_users
@@ -241,8 +232,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.5
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/users:/avocado/users
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/users/node_modules:/avocado/users/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/users:/avocado/users
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/users/node_modules:/avocado/users/node_modules
   microserviceMerchant:
     build: avocado/merchant
     image: avocadoproject_merchant
@@ -256,8 +247,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.6
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant:/avocado/merchant
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant/node_modules:/avocado/merchant/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/merchant:/avocado/merchant
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/merchant/node_modules:/avocado/merchant/node_modules
   microserviceMerchantOutput:
     build: avocado/merchant-outputs
     image: avocadoproject_merchant-outputs
@@ -271,8 +262,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.11
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant-outputs:/avocado/merchant-outputs
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/merchant-outputs/node_modules:/avocado/merchant-outputs/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/merchant-outputs:/avocado/merchant-outputs
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/merchant-outputs/node_modules:/avocado/merchant-outputs/node_modules
   microserviceCarrier:
     build: avocado/carrier
     image: avocadoproject_carrier
@@ -286,8 +277,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.7
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/carrier:/avocado/carrier
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/carrier/node_modules:/avocado/carrier/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/carrier:/avocado/carrier
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/carrier/node_modules:/avocado/carrier/node_modules
   microserviceAcopio:
     build: avocado/acopio
     image: avocadoproject_acopio
@@ -301,8 +292,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.8
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio:/avocado/acopio
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio/node_modules:/avocado/acopio/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/acopio:/avocado/acopio
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/acopio/node_modules:/avocado/acopio/node_modules
   microserviceAcopioOutput:
     build: avocado/acopio-outputs
     image: avocadoproject_acopio-outputs
@@ -316,8 +307,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.12
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio-outputs:/avocado/acopio-outputs
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/acopio-outputs/node_modules:/avocado/acopio-outputs/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/acopio-outputs:/avocado/acopio-outputs
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/acopio-outputs/node_modules:/avocado/acopio-outputs/node_modules
   microserviceProductor:
     build: avocado/productor
     image: avocadoproject_productor
@@ -331,8 +322,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.9
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/productor:/avocado/productor
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/productor/node_modules:/avocado/productor/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/productor:/avocado/productor
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/productor/node_modules:/avocado/productor/node_modules
   microserviceTraceability:
     build: avocado/traceability
     image: avocadoproject_traceability
@@ -346,8 +337,17 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.10
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/traceability:/avocado/traceability
-      - C:/Users/oznnn/Docker/AvocadoProject/avocado/traceability/node_modules:/avocado/traceability/node_modules
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/traceability:/avocado/traceability
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/traceability/node_modules:/avocado/traceability/node_modules
+  ganache:
+    image: trufflesuite/ganache-cli
+    container_name: ganache
+    command: ganache-cli
+    ports:
+      - "8545:8545"
+    networks:
+      AvocadoNetwork:
+        ipv4_address: 172.18.1.13
   database:
     image: mongo
     container_name: mongoDB
@@ -357,7 +357,7 @@ services:
        AvocadoNetwork:
         ipv4_address: 172.18.1.2
     volumes:
-      - C:/Users/oznnn/Docker/AvocadoProject/mongoData:/data/db
+      - C:/Users/USERNAME/Docker/AvocadoProject/mongoData:/data/db
 networks:
   AvocadoNetwork:
     external: true
