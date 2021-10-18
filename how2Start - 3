@@ -1,1 +1,0 @@
-npx nodemon DEBUG=api-gateway:* npm start
