@@ -14,7 +14,7 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.3
     volumes:
-      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/api-gateway:/avocado/api_gateway
+      - C:/Users/USERNAME/Docker/AvocadoProject/avocado/api-gateway:/avocado/api-gateway
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/api-gateway/node_modules:/avocado/api-gateway/node_modules
   microserviceAudit:
     build: avocado/audit
