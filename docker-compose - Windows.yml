@@ -7,7 +7,7 @@ services:
     container_name: api-gateway
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "80:80"
     networks:
@@ -22,7 +22,7 @@ services:
     container_name: audit
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3000:3000"
     networks:
@@ -37,7 +37,7 @@ services:
     container_name: users
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3001:3001"
     networks:
@@ -52,7 +52,7 @@ services:
     container_name: merchant
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3002:3002"
     networks:
@@ -67,7 +67,7 @@ services:
     container_name: merchant-outputs
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3007:3007"
     networks:
@@ -82,7 +82,7 @@ services:
     container_name: carrier
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3003:3003"
     networks:
@@ -97,7 +97,7 @@ services:
     container_name: acopio
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3004:3004"
     networks:
@@ -112,7 +112,7 @@ services:
     container_name: acopio-outputs
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3008:3008"
     networks:
@@ -127,7 +127,7 @@ services:
     container_name: productor
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3005:3005"
     networks:
@@ -142,7 +142,7 @@ services:
     container_name: traceability
     restart: always
     #links: database
-    #command: npm update
+     #command: npm install #; npm update
     ports:
       - "3006:3006"
     networks:
