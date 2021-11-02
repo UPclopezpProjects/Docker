@@ -17,5 +17,4 @@ RUN apt-get install mongodb-clients -y
 
 #Install Angular
 RUN curl -qL https://www.npmjs.com/install.sh | sh
-RUN nano install.sh
 RUN npm install -g @angular/cli@11.2.9
