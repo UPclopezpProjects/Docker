@@ -10,7 +10,6 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 #Install NodeJS
 RUN apt-get install nodejs -y
-RUN npm install npm@8.1.0
 
 #Install the MongoDB client in Linux
 RUN apt-get install mongodb-clients -y
