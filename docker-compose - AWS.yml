@@ -161,7 +161,7 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.13
   database:
-    image: mongo
+    image: mongo:4.4.6
     container_name: mongoDB
     ports:
       - "27017:27017"
