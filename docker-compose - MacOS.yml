@@ -14,8 +14,8 @@ services:
       AvocadoNetwork:
         ipv4_address: 172.18.1.3
     volumes:
-      - /Users/USERNAME/AvocadoProject/avocado/api_gateway:/avocado/api_gateway
-      - /Users/USERNAME/AvocadoProject/avocado/api_gateway/node_modules:/avocado/api_gateway/node_modules
+      - /Users/USERNAME/AvocadoProject/avocado/api-gateway:/avocado/api-gateway
+      - /Users/USERNAME/AvocadoProject/avocado/api-gateway/node_modules:/avocado/api-gateway/node_modules
   microserviceAudit:
     build: avocado/audit
     image: jclopezpimentel/avocadoproject_audit:latest
