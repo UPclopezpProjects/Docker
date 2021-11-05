@@ -10,3 +10,4 @@ docker run --name productor --net AvocadoNetwork -d -p 3005:3005 -v /home/ubuntu
 docker run --name traceability --net AvocadoNetwork -d -p 3006:3006 -v /home/ubuntu/AvocadoProject/avocado/traceability:/avocado/traceability -i jclopezpimentel/avocadoproject:latest
 docker run --name api-gateway --net AvocadoNetwork -d -p 80:80 -v /home/ubuntu/AvocadoProject/avocado/api-gateway:/avocado/api-gateway -i jclopezpimentel/avocadoproject:latest
 docker run --name users-client --net AvocadoNetwork -d -p 4200:4200 -v /home/ubuntu/AvocadoProject/avocado/users-client:/avocado/users-client -i jclopezpimentel/avocadoproject:latest
+docker run --name ganache --net AvocadoNetwork -p 8545:8545 -i trufflesuite/ganache-cli:v6.12.2
