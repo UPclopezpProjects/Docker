@@ -3,7 +3,7 @@ version: '2.4'
 services:
   api-gateway:
     build: avocado/api-gateway
-    image: ajclopezpimentel/avocadoproject_api-gateway:latest
+    image: jclopezpimentel/avocadoproject_api-gateway:latest
     container_name: api-gateway
     restart: always
     #links: database
@@ -18,7 +18,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/api-gateway/node_modules:/avocado/api-gateway/node_modules
   microserviceAudit:
     build: avocado/audit
-    image: ajclopezpimentel/avocadoproject_audit:latest
+    image: jclopezpimentel/avocadoproject_audit:latest
     container_name: audit
     restart: always
     #links: database
@@ -33,7 +33,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/audit/node_modules:/avocado/audit/node_modules
   microserviceUsers:
     build: avocado/users
-    image: ajclopezpimentel/avocadoproject_users:latest
+    image: jclopezpimentel/avocadoproject_users:latest
     container_name: users
     restart: always
     #links: database
@@ -48,7 +48,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/users/node_modules:/avocado/users/node_modules
   microserviceMerchant:
     build: avocado/merchant
-    image: ajclopezpimentel/avocadoproject_merchant:latest
+    image: jclopezpimentel/avocadoproject_merchant:latest
     container_name: merchant
     restart: always
     #links: database
@@ -63,7 +63,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/merchant/node_modules:/avocado/merchant/node_modules
   microserviceMerchantOutput:
     build: avocado/merchant-outputs
-    image: ajclopezpimentel/avocadoproject_merchant-outputs:latest
+    image: jclopezpimentel/avocadoproject_merchant-outputs:latest
     container_name: merchant-outputs
     restart: always
     #links: database
@@ -78,7 +78,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/merchant-outputs/node_modules:/avocado/merchant-outputs/node_modules
   microserviceCarrier:
     build: avocado/carrier
-    image: ajclopezpimentel/avocadoproject_carrier:latest
+    image: jclopezpimentel/avocadoproject_carrier:latest
     container_name: carrier
     restart: always
     #links: database
@@ -93,7 +93,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/carrier/node_modules:/avocado/carrier/node_modules
   microserviceAcopio:
     build: avocado/acopio
-    image: ajclopezpimentel/avocadoproject_acopio:latest
+    image: jclopezpimentel/avocadoproject_acopio:latest
     container_name: acopio
     restart: always
     #links: database
@@ -108,7 +108,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/acopio/node_modules:/avocado/acopio/node_modules
   microserviceAcopioOutput:
     build: avocado/acopio-outputs
-    image: ajclopezpimentel/avocadoproject_acopio-outputs:latest
+    image: jclopezpimentel/avocadoproject_acopio-outputs:latest
     container_name: acopio-outputs
     restart: always
     #links: database
@@ -123,7 +123,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/acopio-outputs/node_modules:/avocado/acopio-outputs/node_modules
   microserviceProductor:
     build: avocado/productor
-    image: ajclopezpimentel/avocadoproject_productor:latest
+    image: jclopezpimentel/avocadoproject_productor:latest
     container_name: productor
     restart: always
     #links: database
@@ -138,7 +138,7 @@ services:
       - C:/Users/USERNAME/Docker/AvocadoProject/avocado/productor/node_modules:/avocado/productor/node_modules
   microserviceTraceability:
     build: avocado/traceability
-    image: ajclopezpimentel/avocadoproject_traceability:latest
+    image: jclopezpimentel/avocadoproject_traceability:latest
     container_name: traceability
     restart: always
     #links: database
